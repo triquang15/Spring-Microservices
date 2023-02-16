@@ -2,16 +2,16 @@ package com.devteam.service;
 
 import java.util.List;
 
-import com.devteam.entity.User;
+import com.devteam.dto.UserDto;
 
 public interface UserService {
-	User createUser(User user);
+	UserDto createUser(UserDto user);
 
-	User getUserById(Long userId);
+	UserDto getUserById(Long userId);
 
-	List<User> getAllUsers();
+	List<UserDto> getAllUsers();
 
-	User updateUser(User user);
+	UserDto updateUser(UserDto user);
 	
 	void deleteUser(Long userId);
 }
