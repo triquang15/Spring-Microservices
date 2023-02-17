@@ -7,13 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "createUser",
+			"name": "getDepartment",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\": \"Messi\",\r\n    \"lastname\" : \"Leo\",\r\n    \"email\" : \"messi@gmail.com\"\r\n}",
+					"raw": "{\r\n    \"departmentName\": \"Research\",\r\n    \"departmentDescription\" : \"Research and development\",\r\n    \"departmentCode\" : \"RAD\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/users",
+					"raw": "http://localhost:8080/api/departments",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -29,7 +29,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"users"
+						"departments"
 					]
 				}
 			},
@@ -121,6 +121,56 @@
 					"path": [
 						"api",
 						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Tri\",\r\n    \"lastName\" : \"Quang\",\r\n    \"email\" : \"triquang@gmail.com\",\r\n    \"departmentCode\" : \"RAD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"employees",
 						"1"
 					]
 				}
