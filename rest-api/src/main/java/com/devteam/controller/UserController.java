@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devteam.dto.UserDto;
-import com.devteam.entity.User;
 import com.devteam.service.UserService;
 
 @RestController
@@ -49,22 +48,20 @@ public class UserController {
 		return new ResponseEntity<>(allUsers, HttpStatus.OK);
 	}
 
-	
 	// http://localhost:8080/api/users/1
 	@PutMapping("/{id}")
 	public ResponseEntity<UserDto> updateUser(@PathVariable("id") Long userId, @RequestBody UserDto user) {
-		
+
 		user.setId(userId);
 		UserDto updateUser = userService.updateUser(user);
 
 		return new ResponseEntity<>(updateUser, HttpStatus.OK);
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> deleteUser(@PathVariable("id") Long userId) {
 		userService.deleteUser(userId);
-		
+
 		return new ResponseEntity<>("User successfully deleted!", HttpStatus.OK);
 	}
-
 }
