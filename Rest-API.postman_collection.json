@@ -176,6 +176,50 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "api-geteway-employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/employee-service/api/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"employee-service",
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api-geteway-department",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9191/department-service/api/departments/RAD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"department-service",
+						"api",
+						"departments",
+						"RAD"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
